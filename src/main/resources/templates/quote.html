@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<style>
+    .vertical-center {
+        min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    .quote-wrapper::before {
+        content: "\201C";
+        color: #ccc;
+        font-family: sans-serif, serif;
+        font-size: 270px;
+        line-height: 1;
+        opacity: .9;
+        position: absolute;
+        top: -48px;
+        left: 0;
+        z-index: 1;
+    }
+    @media (min-width: 850px) {
+
+        .quote-wrapper::before {
+            font-size: 300px;
+        }
+        .text p {
+            font-size: 26px;
+        }
+        .quote-wrapper blockquote footer {
+            bottom: 32px;
+        }
+    }
+</style>
+<body>
+<div class="container h-100 vertical-center">
+    <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+            <div class="jumbotron quote-wrapper">
+                <span class="quote-wrapper"></span>
+            [(${quote})]
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
