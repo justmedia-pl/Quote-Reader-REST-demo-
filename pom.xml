@@ -13,7 +13,7 @@
     <name>readquote</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
         <abas.libs>//10.240.1.10/JavaShares/s3Java/lib</abas.libs>
     </properties>
     <dependencies>
